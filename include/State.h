@@ -9,7 +9,6 @@
 #define STATE_H
 
 #include <Eigen/Dense>
-#include <iostream>
 
 namespace KalmanFilter {
 
