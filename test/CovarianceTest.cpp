@@ -1,5 +1,7 @@
 /**
- * CovarianceTest.h
+ * CovarianceTest.cpp
+ * @Author: Parker Barrett
+ * @Overview: This file contains the covariance class unit tests
  */
 
 // Include Statements
@@ -17,17 +19,17 @@ TEST(Covariance, DefaultConstructor) {
 
   // Check Size and Values
   EXPECT_EQ(CovarianceInt.size(), 1);
-  EXPECT_EQ(CovarianceInt(0, 0), 0);
+  EXPECT_EQ(CovarianceInt(0, 0), 1);
   EXPECT_EQ(CovarianceFloat.size(), 2);
-  EXPECT_EQ(CovarianceFloat(0, 0), 0);
+  EXPECT_EQ(CovarianceFloat(0, 0), 1);
   EXPECT_EQ(CovarianceFloat(0, 1), 0);
   EXPECT_EQ(CovarianceFloat(1, 0), 0);
-  EXPECT_EQ(CovarianceFloat(1, 1), 0);
+  EXPECT_EQ(CovarianceFloat(1, 1), 1);
   EXPECT_EQ(CovarianceDouble.size(), 2);
-  EXPECT_EQ(CovarianceDouble(0, 0), 0);
+  EXPECT_EQ(CovarianceDouble(0, 0), 1);
   EXPECT_EQ(CovarianceDouble(0, 1), 0);
   EXPECT_EQ(CovarianceDouble(1, 0), 0);
-  EXPECT_EQ(CovarianceDouble(1, 1), 0);
+  EXPECT_EQ(CovarianceDouble(1, 1), 1);
 
   // Test Index Operator outside bounds of Covariance size
   EXPECT_EQ(CovarianceDouble(-1, 0), 0);

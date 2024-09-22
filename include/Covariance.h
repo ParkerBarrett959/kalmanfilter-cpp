@@ -17,8 +17,10 @@ class Covariance {
  public:
   /**
    * Default c'tor
+   *
+   * Note: The default covariance matrix is identity.
    */
-  Covariance() : mCovarianceMatrix(Eigen::Matrix<T, Size, Size>::Zero()) {}
+  Covariance() : mCovarianceMatrix(Eigen::Matrix<T, Size, Size>::Identity()) {}
 
   /**
    * c'tor with C++ array
